@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(libbiu LANGUAGES CXX)
+project(biu LANGUAGES CXX)
 enable_testing()
 include(GNUInstallDirs)
 
@@ -35,8 +35,8 @@ target_link_libraries(biu PUBLIC
   range-v3::range-v3
   ${TGBOTCPP_LIB} ${BACKTRACE_LIB})
 set_property(TARGET biu PROPERTY CXX_STANDARD 23 CXX_STANDARD_REQUIRED ON CXX_EXTENSIONS OFF)
-install(TARGETS biu EXPORT BiuConfig)
-install(EXPORT BiuConfig NAMESPACE ${PROJECT_NAME}:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Biu)
+install(TARGETS biu EXPORT biuConfig)
+install(EXPORT biuConfig NAMESPACE ${PROJECT_NAME}:: DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/biu)
 install(DIRECTORY include DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 get_property(ImportedTargets DIRECTORY "${CMAKE_SOURCE_DIR}" PROPERTY IMPORTED_TARGETS)
