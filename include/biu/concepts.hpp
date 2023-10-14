@@ -2,6 +2,7 @@
 # include <concepts>
 # include <tuple>
 # include <type_traits>
+# include <complex>
 
 namespace biu
 {
@@ -41,4 +42,6 @@ namespace biu
 
 	template <typename Function, typename Result, typename... Args> concept InvocableWithResult
 		= std::is_invocable_r_v<Result, Function, Args...>;
+	
+	template <typename T> concept Arithmetic = std::is_arithmetic<T>::value || SpecializationOf<T, std::complex>;
 }

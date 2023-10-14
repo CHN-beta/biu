@@ -7,3 +7,4 @@
 # include <biu/logger.tpp>
 # include <biu/smartref.tpp>
 # include <biu/string.tpp>
+# include <biu/eigen.hpp>

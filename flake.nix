@@ -17,7 +17,7 @@
       {
         packages = with pkgs; [ pkg-config cmake ninja ];
         buildInputs =
-          (with pkgs; [ fmt boost magic-enum libbacktrace ])
+          (with pkgs; [ fmt boost magic-enum libbacktrace eigen range-v3 ])
           ++ (with pkgs.localPackages; [ concurrencpp tgbot-cpp nameof ]);
         hardeningDisable = [ "all" ];
         # NIX_DEBUG = "1";
