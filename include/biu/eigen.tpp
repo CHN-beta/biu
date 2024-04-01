@@ -2,7 +2,7 @@
 # include <span>
 # include <ranges>
 # include <biu/eigen.hpp>
-# include <biu/logger.hpp>
+// # include <biu/logger.hpp>
 # include <range/v3/view.hpp>
 
 namespace biu

@@ -15,7 +15,7 @@
     {
       devShell.x86_64-linux = pkgs.mkShell.override { stdenv = pkgs.gcc13Stdenv; }
       {
-        packages = with pkgs; [ pkg-config cmake ninja ];
+        packages = with pkgs; [ pkg-config cmake ninja clang-tools_17 ];
         buildInputs =
           (with pkgs; [ fmt boost magic-enum libbacktrace eigen range-v3 ])
           ++ (with pkgs.localPackages; [ concurrencpp tgbot-cpp nameof ]);
